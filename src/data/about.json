@@ -1,0 +1,19 @@
+{
+  "name": "Ashish Kumar Verma",
+  "title": "Software Engineer | Python & Django Specialist",
+  "email": "ashish20301@gmail.com",
+  "linkedin": "https://www.linkedin.com/in/ashish-kumar-verma/",
+  "github": "https://github.com/ASHISH20301/ASHISH20301",
+  "cvLink": "https://drive.google.com/file/d/1csjvSXbYmBZiwM5AQT9xF9gRIZurJ2BN/view?usp=drive_link",
+  "aboutMe": "I'm a passionate Software Engineer with over 2 years of specialized experience in Python and Django development. My expertise lies in optimizing code efficiency and enhancing system performance for high-traffic applications, positively impacting over 50 million users. With a strong foundation in data structures, OOP, and API integration, I thrive on solving complex problems and delivering robust, scalable solutions.",
+  "education": {
+    "degree": "B.Tech in Computer Science",
+    "institution": "Chandigarh Group of Colleges, Landran, Mohali, India",
+    "period": "July 2018 - June 2022"
+  },
+  "certifications": [
+    "Programming With Python: Hands-On Introduction to Beginners - Udemy",
+    "Programming for Everybody (Getting Started with Python) - Coursera (University of Michigan)",
+    "Python Data Structures - Coursera (University of Michigan)"
+  ]
+}

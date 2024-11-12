@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Software Engineer",
+    "company": "Vitraya Technologies",
+    "period": "July 2022 - Present",
+    "achievements": [
+      "Optimized code for bill parsing, reducing claims approval time by over 80%.",
+      "Led digital transformation projects for medical insurance claims, resulting in a 30% increase in processing speed.",
+      "Successfully integrated the Vitraya OCR Solutions project with the Bill Parser project.",
+      "Developed and deployed service suites using Python, Django, and MongoDB technologies."
+    ]
+  },
+  {
+    "title": "R&D Intern",
+    "company": "Nokia Solutions & Networks India Pvt Ltd",
+    "period": "August 2021 - May 2022",
+    "achievements": [
+      "Deployed 50+ virtual machines on Nokia Cloudbase.",
+      "Conducted automated Cloudbase deployments with IPv4, IPv6, and dual-stack IP configurations."
+    ]
+  }
+]
