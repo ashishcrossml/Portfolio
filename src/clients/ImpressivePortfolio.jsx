@@ -140,7 +140,7 @@ export default function ImpressivePortfolio() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-lg leading-relaxed">
-                    I'm a passionate Software Engineer with over 2 years of specialized experience in Python and Django development. My expertise lies in optimizing code efficiency and enhancing system performance for high-traffic applications, positively impacting over 50 million users. With a strong foundation in data structures, OOP, and API integration, I thrive on solving complex problems and delivering robust, scalable solutions.
+                    I&apos;m a passionate Software Engineer with over 2 years of specialized experience in Python and Django development. My expertise lies in optimizing code efficiency and enhancing system performance for high-traffic applications, positively impacting over 50 million users. With a strong foundation in data structures, OOP, and API integration, I thrive on solving complex problems and delivering robust, scalable solutions.
                   </p>
                   <div className="mt-6">
                     <h3 className="text-xl font-semibold mb-2">Education</h3>
@@ -219,11 +219,11 @@ export default function ImpressivePortfolio() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}
         >
-          <h2 className="text-3xl font-semibold mb-6 text-center">Let's Connect</h2>
+          <h2 className="text-3xl font-semibold mb-6 text-center">Let&apos;s Connect</h2>
           <Card className="bg-white bg-opacity-10 border-none text-white">
             <CardContent className="flex flex-col sm:flex-row justify-between items-center p-6">
               <p className="text-lg mb-4 sm:mb-0">
-                I'm always open to new opportunities and collaborations. Feel free to reach out!
+                I&apos;m always open to new opportunities and collaborations. Feel free to reach out!
               </p>
               <Button size="lg" variant="secondary" asChild>
                 <a href="mailto:ashish20301@gmail.com">
