@@ -1,7 +1,6 @@
 import '@/app/globals.css';
 import { Inter } from 'next/font/google'
 import Link from 'next/link'
-import { Button } from "@/components/ui/button"
 import { Github, Linkedin, Mail, Download } from "lucide-react"
 
 const inter = Inter({ subsets: ['latin'] })
@@ -28,27 +27,19 @@ export default function RootLayout({
               Software Engineer | Python & Django Specialist
             </p>
             <div className="flex justify-center space-x-4 mb-8">
-              <Button variant="secondary" size="icon" asChild>
-                <Link href="mailto:ashish20301@gmail.com" aria-label="Email">
-                  <Mail className="h-5 w-5" />
-                </Link>
-              </Button>
-              <Button variant="secondary" size="icon" asChild>
-                <Link href="https://www.linkedin.com/in/ashish-kumar-verma/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                  <Linkedin className="h-5 w-5" />
-                </Link>
-              </Button>
-              <Button variant="secondary" size="icon" asChild>
-                <Link href="https://github.com/ASHISH20301/ASHISH20301" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                  <Github className="h-5 w-5" />
-                </Link>
-              </Button>
-              <Button variant="secondary" asChild>
-                <Link href="https://drive.google.com/file/d/1csjvSXbYmBZiwM5AQT9xF9gRIZurJ2BN/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
-                  <Download className="h-5 w-5 mr-2" />
-                  Download CV
-                </Link>
-              </Button>
+              <Link href="mailto:ashish20301@gmail.com" aria-label="Email" className="inline-flex items-center justify-center w-10 h-10 rounded-md bg-white bg-opacity-20 hover:bg-opacity-30 transition-colors duration-200">
+                <Mail className="h-5 w-5" />
+              </Link>
+              <Link href="https://www.linkedin.com/in/ashish-kumar-verma/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="inline-flex items-center justify-center w-10 h-10 rounded-md bg-white bg-opacity-20 hover:bg-opacity-30 transition-colors duration-200">
+                <Linkedin className="h-5 w-5" />
+              </Link>
+              <Link href="https://github.com/ASHISH20301/ASHISH20301" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="inline-flex items-center justify-center w-10 h-10 rounded-md bg-white bg-opacity-20 hover:bg-opacity-30 transition-colors duration-200">
+                <Github className="h-5 w-5" />
+              </Link>
+              <Link href="https://drive.google.com/file/d/1csjvSXbYmBZiwM5AQT9xF9gRIZurJ2BN/view?usp=drive_link" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-4 py-2 rounded-md bg-white bg-opacity-20 hover:bg-opacity-30 transition-colors duration-200">
+                <Download className="h-5 w-5 mr-2" />
+                Download CV
+              </Link>
             </div>
             <nav>
               <ul className="flex justify-center space-x-4">

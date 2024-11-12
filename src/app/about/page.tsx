@@ -2,11 +2,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
 export default function About() {
   return (
-    <Card className="bg-white bg-opacity-10 border-none text-white">
-      <CardHeader>
-        <CardTitle className="text-2xl">About Me</CardTitle>
-      </CardHeader>
-      <CardContent>
+    <div className="bg-white bg-opacity-10 border-none text-white rounded-lg shadow-md overflow-hidden">
+      <div className="p-6">
+        <h2 className="text-2xl font-semibold mb-4">About Me</h2>
         <p className="text-lg leading-relaxed mb-6">
           I&apos;m a passionate Software Engineer with over 2 years of specialized experience in Python and Django development. My expertise lies in optimizing code efficiency and enhancing system performance for high-traffic applications, positively impacting over 50 million users. With a strong foundation in data structures, OOP, and API integration, I thrive on solving complex problems and delivering robust, scalable solutions.
         </p>
@@ -23,7 +21,7 @@ export default function About() {
             <li>Python Data Structures - Coursera (University of Michigan)</li>
           </ul>
         </div>
-      </CardContent>
-    </Card>
+      </div>
+    </div>
   )
 }

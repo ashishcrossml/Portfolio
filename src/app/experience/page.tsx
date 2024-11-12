@@ -1,5 +1,3 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-
 const experiences = [
   {
     title: "Software Engineer",
@@ -27,19 +25,17 @@ export default function Experience() {
   return (
     <div className="space-y-6">
       {experiences.map((exp, index) => (
-        <Card key={index} className="bg-white bg-opacity-10 border-none text-white">
-          <CardHeader>
-            <CardTitle className="text-2xl">{exp.title}</CardTitle>
-            <CardDescription className="text-gray-300">{exp.company} | {exp.period}</CardDescription>
-          </CardHeader>
-          <CardContent>
+        <div key={index} className="bg-white bg-opacity-10 border-none text-white rounded-lg shadow-md overflow-hidden">
+          <div className="p-6">
+            <h2 className="text-2xl font-semibold mb-2">{exp.title}</h2>
+            <p className="text-gray-300 mb-4">{exp.company} | {exp.period}</p>
             <ul className="list-disc pl-5 space-y-2">
               {exp.achievements.map((achievement, i) => (
                 <li key={i} className="text-gray-200">{achievement}</li>
               ))}
             </ul>
-          </CardContent>
-        </Card>
+          </div>
+        </div>
       ))}
     </div>
   )

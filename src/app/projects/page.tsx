@@ -1,5 +1,3 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-
 const projects = [
   {
     title: "Bill Parser",
@@ -27,19 +25,17 @@ export default function Projects() {
   return (
     <div className="space-y-6">
       {projects.map((project, index) => (
-        <Card key={index} className="bg-white bg-opacity-10 border-none text-white">
-          <CardHeader>
-            <CardTitle className="text-2xl">{project.title}</CardTitle>
-            <CardDescription className="text-gray-300">{project.description}</CardDescription>
-          </CardHeader>
-          <CardContent>
+        <div key={index} className="bg-white bg-opacity-10 border-none text-white rounded-lg shadow-md overflow-hidden">
+          <div className="p-6">
+            <h2 className="text-2xl font-semibold mb-2">{project.title}</h2>
+            <p className="text-gray-300 mb-4">{project.description}</p>
             <ul className="list-disc pl-5 space-y-2">
               {project.achievements.map((achievement, i) => (
                 <li key={i} className="text-gray-200">{achievement}</li>
               ))}
             </ul>
-          </CardContent>
-        </Card>
+          </div>
+        </div>
       ))}
     </div>
   )
