@@ -48,6 +48,7 @@ export default function RootLayout({
                 <li><Link href="/experience" className="hover:text-yellow-300">Experience</Link></li>
                 <li><Link href="/projects" className="hover:text-yellow-300">Projects</Link></li>
                 <li><Link href="/skills" className="hover:text-yellow-300">Skills</Link></li>
+                <li><Link href="/contact" className="hover:text-yellow-300">Contact</Link></li>
               </ul>
             </nav>
           </header>
