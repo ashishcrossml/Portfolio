@@ -25,7 +25,7 @@ export default function ImpressivePortfolio() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-700 via-blue-500 to-teal-400 text-white py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-5xl mx-auto">
         <header className="text-center mb-12 relative">
           <motion.h1 
