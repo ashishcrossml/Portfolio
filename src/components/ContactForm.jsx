@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Mail } from "lucide-react"
+import emailjs from '@emailjs/browser'
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -12,17 +13,35 @@ export default function ContactForm() {
     message: ''
   })
   const [status, setStatus] = useState('')
-  const [submittedData, setSubmittedData] = useState(null)
+  const [loading, setLoading] = useState(false)
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    
-    // Store the submitted data
-    setSubmittedData(formData)
-    setStatus('Message sent successfully!')
-    
-    // Clear the form
-    setFormData({ name: '', email: '', message: '' })
+    setLoading(true)
+
+    try {
+      const result = await emailjs.send(
+        'service_wfqgrbn',    // Your EmailJS service ID
+        'template_78l1obp',   // Your EmailJS template ID
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+          to_email: 'ashish.emailjs@gmail.com',
+        },
+        'GONrWpFNQUBn3y03G'  // Your public key (already in emailjs.js)
+      )
+
+      if (result.status === 200) {
+        setStatus('Message sent successfully!')
+        setFormData({ name: '', email: '', message: '' })
+      }
+    } catch (error) {
+      setStatus('Failed to send message. Please try again.')
+      console.error('Email error:', error)
+    } finally {
+      setLoading(false)
+    }
   }
 
   const handleChange = (e) => {
@@ -34,8 +53,8 @@ export default function ContactForm() {
 
   return (
     <Card className="bg-white bg-opacity-10 border-none text-white">
-      <CardContent className="p-6">
-        <form onSubmit={handleSubmit} className="space-y-4">
+      <CardContent>
+        <form onSubmit={handleSubmit} className="space-y-6">
           <div>
             <label htmlFor="name" className="block text-sm font-medium mb-2">Name</label>
             <input
@@ -78,21 +97,24 @@ export default function ContactForm() {
             />
           </div>
           
-          <Button type="submit" size="lg" variant="secondary" className="w-full">
-            <Mail className="mr-2 h-5 w-5" /> Send Message
+          <Button 
+            type="submit" 
+            size="lg" 
+            variant="secondary" 
+            className="w-full"
+            disabled={loading}
+          >
+            <Mail className="mr-2 h-5 w-5" />
+            {loading ? 'Sending...' : 'Send Message'}
           </Button>
           
           {status && (
             <div className="mt-4">
-              <p className="text-center text-green-400 mb-4">{status}</p>
-              {submittedData && (
-                <div className="bg-white bg-opacity-20 p-4 rounded-md">
-                  <h3 className="font-semibold mb-2">Submitted Details:</h3>
-                  <p><span className="font-medium">Name:</span> {submittedData.name}</p>
-                  <p><span className="font-medium">Email:</span> {submittedData.email}</p>
-                  <p><span className="font-medium">Message:</span> {submittedData.message}</p>
-                </div>
-              )}
+              <p className={`text-center ${
+                status.includes('success') ? 'text-green-400' : 'text-red-400'
+              } mb-4`}>
+                {status}
+              </p>
             </div>
           )}
         </form>

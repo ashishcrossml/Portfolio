@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { Github, Linkedin, Mail, Download } from "lucide-react"
 import Background from '@/components/Background'
 import Navigation from '@/components/Navigation'
+import '@/lib/emailjs';
 
 const inter = Inter({ subsets: ['latin'] })
 
